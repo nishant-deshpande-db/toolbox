@@ -52,19 +52,6 @@ result_tbl = spark_task_info.createDataFromEventsTable(df)
 
 #### Some simple queries on the result table.
 
-##### Get extreme outlier tasks (hopefully none!)
-```
--- tasks that took longer than the p95 task duration for a stage,
--- and if that is explained by the task metrics.
-select task_id, task_time as task_duration,
-  if(overall_score > 0, 1, 0) as is_explained, 
-  stage_avg_task_time, stage_median_task_time, stage_p95_task_time
-from {result_table}
-where stage_id = 4
-and gt_p95_10 = 1
-order by task_duration
-```
-
 ##### Get tasks for a stage ordered by task_duration with selected metrics.
 ```
 select task_id, task_time as task_duration,
@@ -93,8 +80,12 @@ from t
 order by 2;
 ```
 
+There are a lot more queries you can do.
+
 ### Note
 
 The results table has a lot of columns, and they are somewhat cryptic until you get used to them.
 
-Read the detailed documentation to understand them. They do have some method to them.
+Read the detailed documentation (under construction) to understand them. They do have some method to them.
+
+Contact nishant.deshpande@databricks.com with any questions.
