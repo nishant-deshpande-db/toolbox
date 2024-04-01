@@ -14,7 +14,17 @@ The eventlogs can be on cloud store, or in (regional) logfood.
 
 ### Installing
 
-```pip install spark_task_info-<version>-py3-none-any.whl```
+1. Download the latest wheel from dist.
+
+2. Install it as a python wheel into your cluster using the "Libraries" tab.
+
+Or
+
+2. upload to somewhere you can see it on your cluster.
+
+```pip install /uploaded/location/spark_task_info-<version>-py3-none-any.whl```
+
+
 
 ### Using
 
