@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spark_task_info"
+version = "0.1.6"
+description = "Get spark task level metrics from spark eventlogs."
+authors = [{name = "Nishant Deshpande", email = "nishant.deshpande@databricks.com"}]
+#license = "MIT"
+readme = "README.md"
+keywords = ["spark", "task", "info"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
