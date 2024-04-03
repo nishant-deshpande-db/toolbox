@@ -13,6 +13,9 @@ STI parses the eventlogs you point it at, constructs above, and saves it to a ta
 The eventlogs can be on cloud store, or in (regional) logfood.
 
 ### Installing
+1. Use the python notebook spark_task_info.py directly via `%run`
+
+OR
 
 1. Download the latest wheel from dist.
 
@@ -20,7 +23,7 @@ The eventlogs can be on cloud store, or in (regional) logfood.
 
 Or
 
-2. upload to somewhere you can see it on your cluster.
+2. upload the wheel somewhere you can see it on your cluster.
 
 ```pip install /uploaded/location/spark_task_info-<version>-py3-none-any.whl```
 
