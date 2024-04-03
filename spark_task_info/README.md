@@ -107,6 +107,6 @@ There are a lot more queries you can do.
 
 The results table has a lot of columns, and they are somewhat cryptic until you get used to them.
 
-Read the detailed documentation (under construction) to understand them. They do have some method to them.
+Read the detailed documentation (in docs/Notes.md) to understand them. They do have some method to them.
 
 Contact nishant.deshpande@databricks.com with any questions.
