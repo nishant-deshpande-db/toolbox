@@ -35,6 +35,27 @@ But some customer analyzed jobs turned up "unexplained outlier tasks". I.e. the 
 
 The class SparkTasksWithStageEDA has some queries that show such tasks. (EDA = Exploratory Data Analysis.) They are not documented yet.
 
-A notebook that shows how to query the results table is required, but hasn't been curated yet.
+#### Columns in the results table
+
+task_metrics = struct with all the task metrics i.e. those in the task metrics section of the task end event logs.
+
+task_accumulables = struct with all the task accumulables i.e. in the accumulables section of the task end event logs.
+
+task_* = general task info like start, end times.
+
+stage_[avg|median|p95]_* = stage aggregates of each metric over all tasks in the stage.
+
+stage__* = basic stage information (start time, end time..)
+
+gt_p95_[5|10]_* = flag indicating if a task was greater than the p95*[5|10] of the metric for the stage.
+
+overall_score = sum of the gt_* flags.
+
+#### Misc
+
+Unclear if all the metrics should have been columns, vs in the structs. Or if the stage_* and gt_* columns should have been in structs. Structs are harder to grep, but lots of columns make things generally uglier.
+
+
+
 
 
