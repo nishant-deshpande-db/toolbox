@@ -28,9 +28,17 @@ Or
 
 ### Using
 
+If you installed the wheel
 ```
 import spark_task_info
 ```
+
+Or just use spark_task_info.py as a notebook (it is a Databricks notebook) and run it:
+```
+%run /path/to/spark_task_info
+```
+If you do this, then you don't need to use 'spark_task_info.' in the cmd below.
+
 
 ##### From cloud store logs
 ```
