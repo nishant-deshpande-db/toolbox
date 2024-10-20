@@ -1,6 +1,6 @@
-## Model Inference and scaling on Databricks
+## Scaling API based workloads on Databricks
 
-A set of notebooks to illustrate how to run model inference on the Databricks platform.
+A set of notebooks to illustrate how to run API workloads using LLM model inference on the Databricks platform.
 
 Notebooks in this repo:
 
