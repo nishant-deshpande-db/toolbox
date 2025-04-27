@@ -15,6 +15,16 @@ streaming_listener.MyListener.__VERSION__
 
 # COMMAND ----------
 
+import logging
+logging.basicConfig(level=logging.INFO)
+
+# COMMAND ----------
+
+logging.getLogger('streaming_listener').setLevel(logging.INFO)
+
+
+# COMMAND ----------
+
 ts = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
 print(ts)
 
