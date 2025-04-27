@@ -11,7 +11,9 @@ The streaming listener here writes to a local filesystem. There are options to w
 If your requirement is for no possible data loss, push each event to a message bus. Otherwise this is an easy alternative.
 
 The Databricks notebook "streaming listener usage example" has an example that should work in general, but has some specific nicities around using dbfs or Volumes in the Databricks environment.
-It also then reads the written json files of stream events and displays them in the notebook.
+For example, Databricks has DBFS and Volumes (volumes recommended over DBFS). These are cloud locations that are mounted to the local filesystem of a Databricks cluster, so writing to those locations writes to the cloud locations. Which is pretty nice.
+
+The example also reads the written json files of stream events and displays them so you can quickly see what information is in there.
 
 Note that a single listener will listen to multiple spark streams on the same spark driver/cluster. So name each stream for an easy way to distinguish between events from different streams. The example shows this.
 
